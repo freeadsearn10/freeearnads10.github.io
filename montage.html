@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Ad Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1f1c2c, #928dab);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .button-container {
+            margin: 40px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(to right, #ff6a00, #ee0979);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .button-animation {
+            animation: bounce 0.5s;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: linear-gradient(to right, #434343, #000000);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+    <script src='//niphaumeenses.net/vignette.min.js' data-zone='8580276' data-sdk='show_8580276'></script>
+</head>
+<body>
+    <header>
+        <h1>Premium Interactive Ad Page</h1>
+    </header>
+
+    <div class="button-container">
+        <button onclick="showAd(this)">Show Ad 1</button>
+        <button onclick="showAd(this)">Show Ad 2</button>
+        <button onclick="showAd(this)">Show Ad 3</button>
+        <button onclick="showAd(this)">Show Ad 4</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Premium Ad Page. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showAd(button) {
+            // Add animation to the button
+            button.classList.add('button-animation');
+            
+            // Trigger ad script
+            setTimeout(() => {
+                alert("Ad is being displayed!");
+                button.classList.remove('button-animation'); // Remove animation after ad is shown
+            }, 300); // Delay matches animation duration
+        }
+    </script>
+</body>
+</html>
