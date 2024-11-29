@@ -5,32 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Ad Page</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* General Reset and Styling */
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #1f1c2c, #928dab);
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom right, #1f1c2c, #928dab);
             color: white;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
         }
 
         header {
             background: linear-gradient(to right, #6a11cb, #2575fc);
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 1200px;
+            text-align: center;
         }
 
         header h1 {
-            margin: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         .button-container {
-            margin: 40px auto;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 30px;
+            margin-top: 30px;
         }
 
         button {
@@ -38,12 +63,12 @@
             color: white;
             border: none;
             border-radius: 50px;
-            padding: 15px 30px;
+            padding: 15px 40px;
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         }
 
         button:hover {
@@ -55,16 +80,16 @@
             transform: scale(0.95);
         }
 
-        .button-animation {
-            animation: bounce 0.5s;
-        }
-
         footer {
-            margin-top: 50px;
-            padding: 20px;
             background: linear-gradient(to right, #434343, #000000);
             color: white;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 1200px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
         }
 
         @keyframes bounce {
@@ -75,6 +100,10 @@
                 transform: translateY(-10px);
             }
         }
+
+        .button-animation {
+            animation: bounce 0.5s;
+        }
     </style>
     <script src='//niphaumeenses.net/vignette.min.js' data-zone='8580276' data-sdk='show_8580276'></script>
 </head>
@@ -83,11 +112,16 @@
         <h1>Premium Interactive Ad Page</h1>
     </header>
 
-    <div class="button-container">
-        <button onclick="showAd(this)">Show Ad 1</button>
-        <button onclick="showAd(this)">Show Ad 2</button>
-        <button onclick="showAd(this)">Show Ad 3</button>
-        <button onclick="showAd(this)">Show Ad 4</button>
+    <div class="content">
+        <p style="font-size: 1.5rem; text-align: center; max-width: 800px;">
+            Welcome to our premium ad page. Click any button below to display dynamic ads tailored for you. Enjoy a smooth and interactive experience!
+        </p>
+        <div class="button-container">
+            <button onclick="showAd(this)">Show Ad 1</button>
+            <button onclick="showAd(this)">Show Ad 2</button>
+            <button onclick="showAd(this)">Show Ad 3</button>
+            <button onclick="showAd(this)">Show Ad 4</button>
+        </div>
     </div>
 
     <footer>
